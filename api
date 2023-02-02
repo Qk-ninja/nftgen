@@ -1,0 +1,12 @@
+from flask import Flask, jsonify
+from PIL import Image
+
+app = Flask(__name__)
+
+@app.route('/nft/<int:width>/<int:height>/<color>')
+def generate_nft_image(width, height, color):
+    img = Image.new("RGB", (width, height), color)
+    return jsonify({"success": True, "message": "NFT image generated successfully."})
+
+if __name__ == '__main__':
+    app.run()
