@@ -1,2 +1,5 @@
 Flask
 Pillow
+
+Procfile web: python app.py
+
