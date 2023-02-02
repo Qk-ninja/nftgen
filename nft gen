@@ -1,0 +1,9 @@
+from PIL import Image
+
+def generate_nft_image(width, height, color):
+    img = Image.new("RGB", (width, height), color)
+    return img
+
+# Example usage
+nft_img = generate_nft_image(400, 300, "red")
+nft_img.show()
